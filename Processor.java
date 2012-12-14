@@ -1,4 +1,3 @@
-
 public class Processor
 {
   private static boolean run = true;
@@ -39,11 +38,11 @@ public class Processor
         case 3: width--;
         break;
       }
+      if(height > maxY) maxY = height;
+      if(height < minY) minY = height;
+      if(width > maxX) maxX = width;
+      if(width < minX) minX = width;
     }
-    if(height == 0) height = 1;
-    System.out.println(height);
-    height = Math.abs(height);
-    width = Math.abs(width);
   }
 }
 //Take the whole object by its beginning, rotate it 90 to the right, and add it to the object
