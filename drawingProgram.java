@@ -48,8 +48,10 @@ public class drawingProgram implements ActionListener
     canvas.fillRect(0, 0, WIDTH, HEIGHT);
     objects.foldLine();
     objects.cycleLine();
-    lengthX = 10;
-    lengthY = 10;
+    lengthX = WIDTH/(objects.maxX-objects.minX)/2;
+    lengthY = HEIGHT/(objects.maxY-objects.minY)/2;
+    if (lengthX < 1) lengthX = 1;
+    if (lengthY < 1) lengthY = 1;
     canvas.setColor(Color.BLACK);
     canvas.fillRect(10, 10, 10, 10);
     // for(int i = 0; i > objects.folds; i++)
